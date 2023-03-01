@@ -1,8 +1,7 @@
-#include <stdlib.h>
 #include "binary_trees.h"
 
 /**
- * main - Entry point
+ * main - test 0-binary_tree_node.c
  *
  * Return: Always 0 (Success)
  */

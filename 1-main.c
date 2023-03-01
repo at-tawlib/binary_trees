@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * main - Entry point
+ * main - test 1-binary_tree_insert_left.c
  *
  * Return: Always 0 (Success)
  */
