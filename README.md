@@ -108,5 +108,91 @@ alex@/tmp/binary_trees$ ./6-pre
 512
 alex@/tmp/binary_trees$
 ```
+## [7-binary_tree_inorder.c](7-binary_tree_inorder.c) , [7-main.c](7-main.c)
+goes through a binary tree using in-order traversal
+```
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 7-main.c 7-binary_tree_inorder.c 0-binary_tree_node.c -o 7-in
+alex@/tmp/binary_trees$ ./7-in
+       .-------(098)-------.
+  .--(012)--.         .--(402)--.
+(006)     (056)     (256)     (512)
+6
+12
+56
+98
+256
+402
+512
+alex@/tmp/binary_trees$
+```
+## [8-binary_tree_postorder.c](8-binary_tree_postorder.c) , [8-main.c](8-main.c)
+goes through a binary tree using post-order traversal
+```
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 8-main.c 8-binary_tree_postorder.c 0-binary_tree_node.c -o 8-post
+alex@/tmp/binary_trees$ ./8-post
+       .-------(098)-------.
+  .--(012)--.         .--(402)--.
+(006)     (056)     (256)     (512)
+6
+56
+12
+256
+512
+402
+98
+alex@/tmp/binary_trees$
+```
+## [9-binary_tree_height.c](9-binary_tree_height.c) , [9-main.c](9-main.c)
+measures the height of a binary tree
+```
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 9-binary_tree_height.c 9-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 9-height
+alex@/tmp/binary_trees$ ./9-height 
+  .-------(098)--.
+(012)--.       (128)--.
+     (054)          (402)
+Height from 98: 2
+Height from 128: 1
+Height from 54: 0
+alex@/tmp/binary_trees$
+```
+## [10-binary_tree_depth.c](10-binary_tree_depth.c) , [10-main.c](10-main.c)
+measures the depth of a node in a binary tree
+```
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 10-binary_tree_depth.c 10-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 10-depth
+alex@/tmp/binary_trees$ ./10-depth 
+  .-------(098)--.
+(012)--.       (128)--.
+     (054)          (402)
+Depth of 98: 0
+Depth of 128: 1
+Depth of 54: 2
+alex@/tmp/binary_trees$
+```
+## [11-binary_tree_size.c](11-binary_tree_size.c) , [11-main.c](11-main.c)
+measures the size of a binary tree
 
+```
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 11-binary_tree_size.c 11-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 11-size
+alex@/tmp/binary_trees$ ./11-size 
+  .-------(098)--.
+(012)--.       (128)--.
+     (054)          (402)
+Size of 98: 5
+Size of 128: 2
+Size of 54: 1
+alex@/tmp/binary_trees$
+```
+## [12-binary_tree_leaves.c](12-binary_tree_leaves.c) , [12-main.c](12-main.c)
+counts the leaves in a binary tree
+```
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 12-binary_tree_leaves.c 12-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 12-leaves
+alex@/tmp/binary_trees$ ./12-leaves 
+  .-------(098)--.
+(012)--.       (128)--.
+     (054)          (402)
+Leaves in 98: 2
+Leaves in 128: 1
+Leaves in 54: 1
+alex@/tmp/binary_trees$
+```
 > Written with [StackEdit](https://stackedit.io/).
