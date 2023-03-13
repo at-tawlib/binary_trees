@@ -288,4 +288,51 @@ Uncle of 54: 128
 Uncle of 12: (nil)
 alex@/tmp/binary_trees$
 ```
+
+## [100-binary_trees_ancestor.c](100-binary_trees_ancestor.c) , [100-main.c](100-main.c)
+finds the lowest common ancestor of two nodes
+```
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 100-main.c 100-binary_trees_ancestor.c 0-binary_tree_node.c -o 100-ancestor
+alex@/tmp/binary_trees$ ./100-ancestor
+       .-------(098)-------.
+  .--(012)--.         .--(402)-------.
+(010)     (054)     (045)       .--(128)--.
+                              (092)     (065)
+Ancestor of [12] & [402]: 98
+Ancestor of [45] & [65]: 402
+Ancestor of [128] & [65]: 128
+alex@/tmp/binary_trees$
+```
+## [101-binary_tree_levelorder.c](101-binary_tree_levelorder.c) , [101-main.c](101-main.c)
+goes through a binary tree using level-order traversal
+```
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 101-main.c 101-binary_tree_levelorder.c 0-binary_tree_node.c 3-binary_tree_delete.c -o 101-lvl
+alex@/tmp/binary_trees$ valgrind ./101-lvl
+==23445== Memcheck, a memory error detector
+==23445== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==23445== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==23445== Command: ./101-lvl
+==23445== 
+       .-------(098)-------.
+  .--(012)--.         .--(402)--.
+(006)     (056)     (256)     (512)
+98
+12
+402
+6
+56
+256
+512
+==23445== 
+==23445== HEAP SUMMARY:
+==23445==     in use at exit: 0 bytes in 0 blocks
+==23445==   total heap usage: 19 allocs, 19 frees, 1,197 bytes allocated
+==23445== 
+==23445== All heap blocks were freed -- no leaks are possible
+==23445== 
+==23445== For counts of detected and suppressed errors, rerun with: -v
+==23445== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+alex@/tmp/binary_trees$
+```
+
 > Written with [StackEdit](https://stackedit.io/).
